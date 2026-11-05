@@ -27,6 +27,7 @@ public class QuestionService {
 
     }
 
+<<<<<<< HEAD
     public ResponseEntity<List<Question>> getQuestionByCategory(String category) {
 
         try {
@@ -43,6 +44,15 @@ public class QuestionService {
         questionDao.save(question);
         return new ResponseEntity<>("success",HttpStatus.CREATED);
 
+=======
+    public List<Question> getQuestionByCategory(String category) {
+        return questionDao.findByCategory(category);
+    }
+
+    public String addQuestion(Question question){
+        questionDao.save(question);
+        return "success";
+>>>>>>> origin/main
 
     }
 }
